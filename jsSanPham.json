@@ -1,0 +1,223 @@
+{
+    "swagger": "2.0",
+    "info": 
+	{
+        "version": "",
+        "title": "Sheetsu Data",
+        "description": ""
+    },
+    "host": "sheetsu.com",
+    "basePath": "/apis/v1.0su",
+    "schemes": [ "https" ],
+    "securityDefinitions": { "api_key": { "type": "basic" } },
+    "paths": 
+	{
+        "/d01770236983": 
+		{
+            "delete": 
+			{
+                "operationId": "DELETE_d01770236983",
+                "summary": "Destroy Row",
+                "consumes": [ "application/json" ],
+                "produces": [ "application/json" ],
+                "parameters": 
+				[
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": 
+						{
+                            "type": "object",
+                            "properties": 
+							{
+                                "Tên": { "type": "string" },
+                                "Giá": { "type": "string" },
+                                "Ảnh": { "type": "string" }
+                            }
+                        }
+                    }
+                ],
+                "responses": 
+				{
+                    "200": 
+					{
+                        "description": "",
+                        "schema": 
+						{
+                            "type": "array",
+                            "items": 
+							{
+                                "type": "object",
+                                "properties": 
+								{
+                                    "Tên": { "type": "string" },
+									"Giá": { "type": "string" },
+									"Ảnh": { "type": "string" }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+			"post": 
+			{
+                "operationId": "d01770236983",
+                "summary": "Add Row",
+                "consumes": [ "application/json" ],
+                "produces": [ "application/json" ],
+                "parameters": 
+				[
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": 
+						{
+                            "type": "object",
+                            "properties": 
+							{
+                                "Tên": { "type": "string" },
+								"Giá": { "type": "string" },
+								"Ảnh": { "type": "string" }
+                            }
+                        }
+                    }
+                ],
+                "responses": 
+				{
+                    "201": 
+					{
+                        "description": "",
+                        "schema": 
+						{
+                            "type": "object",
+                            "properties": 
+							{
+                                "Tên": { "type": "string" },
+								"Giá": { "type": "string" },
+								"Ảnh": { "type": "string" }
+                            }
+                        }
+                    }
+                }
+            },
+			"get": 
+			{
+                "operationId": "GET_d01770236983",
+                "summary": "Get Sheet",
+                "consumes": [ "application/json" ],
+                "produces": [ "application/json" ],
+                "responses": 
+				{
+                    "200": 
+					{
+                        "description": "",
+                        "schema": 
+						{
+                            "type": "array",
+                            "items": 
+							{
+                                "type": "object",
+                                "properties": 
+								{
+                                    "Tên": { "type": "string" },
+									"Giá": { "type": "string" },
+									"Ảnh": { "type": "string" }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+			"/d01770236983/{column-name}/{value}": 
+			{
+				"parameters": 
+				[
+					{
+						"name": "column-name",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "value",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"delete": 
+				{
+					"operationId": "DELETE_d01770236983-column-name-value",
+					"summary": "Delete Row",
+					"consumes": [ "application/json" ],
+					"produces": [ "application/json" ],
+					"responses": 
+					{
+						"204": 
+						{
+							"description": "",
+							"schema": 
+							{
+								"type": "array",
+								"items": 
+								{
+									"type": "object",
+									"properties": 
+									{
+										"Tên": { "type": "string" },
+										"Giá": { "type": "string" },
+										"Ảnh": { "type": "string" }
+									}
+								}
+							}
+						}
+					}
+				},
+				"patchs": 
+				{
+					"operationId": "PATCH_d01770236983-column-name-value",
+					"summary": "Update Row",
+					"consumes": [ "application/json" ],
+					"produces": [ "application/json" ],
+					"parameters": 
+					[
+						{
+							"name": "body",
+							"in": "body",
+							"schema": 
+							{
+								"type": "object",
+								"properties": 
+								{
+                                    "Tên": { "type": "string" },
+									"Giá": { "type": "string" },
+									"Ảnh": { "type": "string" }
+								}
+							}
+						}
+					],
+					"responses": 
+					{
+						"200": {
+							"description": "",
+							"schema": 
+							{
+								"type": "array",
+								"items": 
+								{
+									"type": "object",
+									"properties": 
+									{
+										"Tên": { "type": "string" },
+										"Giá": { "type": "string" },
+										"Ảnh": { "type": "string" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+	}
+}
